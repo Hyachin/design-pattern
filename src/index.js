@@ -1,10 +1,24 @@
-class Person {
+class Product {
     constructor(name) {
         this.name = name
     }
-    getName() {
-        return this.name
+    init() {
+        console.log('init');
+    }
+    fn1() {
+        console.log('fn1');
+    }
+    fn2() {
+        console.log('fn2');
     }
 }
-let p = new Person('zs')
-console.log(p.getName());
+class Creator {
+    create(name) {
+        return new Product(name)
+    }
+}
+
+let creator = new Creator()
+let p = creator.create('p1')
+p.init()
+p.fn1()
