@@ -9,10 +9,23 @@
 
 ### UML 类图
 
-![Alt text](/public/images/factory.png)
+![factory.png](/public/images/factory.png)
 
 ### 场景
 
 - jQuery-${'div'}等
 - React.createElement
 - Vue 异步组件
+
+## 单例模式
+
+- 一个对象一个实例
+
+### UML 类图
+
+![instance.png](/public/images/instance.png)
+
+### 场景
+
+- 登录框、购物车等
+- vuex 和 redux 中的 store

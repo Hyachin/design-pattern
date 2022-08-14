@@ -1,24 +1,16 @@
-class Product {
-    constructor(name) {
-        this.name = name
-    }
-    init() {
-        console.log('init');
-    }
-    fn1() {
-        console.log('fn1');
-    }
-    fn2() {
-        console.log('fn2');
+class SingleObject {
+    login() {
+        console.log('login...');
     }
 }
-class Creator {
-    create(name) {
-        return new Product(name)
+SingleObject.getInstance = (function () {
+    let instance
+    return function () {
+        if (!instance) {
+            instance = new SingleObject()
+        }
+        return instance
     }
-}
-
-let creator = new Creator()
-let p = creator.create('p1')
-p.init()
-p.fn1()
+})()
+let obj = SingleObject.getInstance()
+obj.login()
