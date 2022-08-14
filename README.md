@@ -9,7 +9,7 @@
 
 ### UML 类图
 
-![factory.png](https://s2.loli.net/2022/08/14/OueWnHifjDap7sm.png)
+<img src="https://s2.loli.net/2022/08/14/OueWnHifjDap7sm.png" alt="factory.png" style="zoom: 50%;" />
 
 ### 场景
 
@@ -23,7 +23,7 @@
 
 ### UML 类图
 
-![instance.png](https://s2.loli.net/2022/08/14/SwfdnoAcr9bQe2U.png)
+<img src="https://s2.loli.net/2022/08/14/SwfdnoAcr9bQe2U.png" alt="instance.png" style="zoom:50%;" />
 
 ### 场景
 
@@ -37,10 +37,25 @@
 
 ### UML 类图
 
-![proxy.png](https://s2.loli.net/2022/08/14/UhEryepXG5dnu3N.png)
+<img src="https://s2.loli.net/2022/08/14/UhEryepXG5dnu3N.png" alt="proxy.png" style="zoom:50%;" />
 
 ### 场景
 
 - 网页事件代理
 - jQuery $.proxy
 - ES6 Proxy
+
+## 观察者模式
+
+- 订报纸
+
+### UML 类图
+
+<img src="https://s2.loli.net/2022/08/14/JmA2bHWOCGzioLT.png" alt="observer.png" style="zoom:50%;" />
+
+### 场景
+
+- 网页事件绑定
+- Promise
+- jQuery callbacks
+- nodejs 自定义事件

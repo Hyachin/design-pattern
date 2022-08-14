@@ -1,23 +1,39 @@
-// proxy.js
-class RealImg {
-    constructor(fileName) {
-        this.fileName = fileName
-        this.loadFormDisk()
+class Subject {
+    constructor() {
+        this.state = 0
+        this.observers = []
     }
-    loadFormDisk() {
-        console.log('loading', this.fileName);
+    getState() {
+        return this.state
     }
-    display() {
-        console.log('display', this.fileName);
+    setState(state) {
+        this.state = state
+        this.notifyAllObservers()
+    }
+    notifyAllObservers() {
+        this.observers.forEach(observer => {
+            observer.update()
+        })
+    }
+    attach(observer) {
+        this.observers.push(observer)
     }
 }
-class ProxyImg {
-    constructor(fileName) {
-        this.realImg = new RealImg(fileName)
+class Observer {
+    constructor(name, subject) {
+        this.name = name
+        this.subject = subject
+        this.subject.attach(this)
     }
-    display() {
-        this.realImg.display()
+    update() {
+        console.log(`${this.name} update ,state:${this.subject.getState()}`);
     }
 }
-let p = new ProxyImg('1.png')
-p.display()
+// test
+let s = new Subject()
+let o1 = new Observer('o1', s)
+let o2 = new Observer('o2', s)
+let o3 = new Observer('o3', s)
+s.setState(1)
+s.setState(2)
+s.setState(3)
