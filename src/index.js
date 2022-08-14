@@ -1,16 +1,23 @@
-class SingleObject {
-    login() {
-        console.log('login...');
+// proxy.js
+class RealImg {
+    constructor(fileName) {
+        this.fileName = fileName
+        this.loadFormDisk()
+    }
+    loadFormDisk() {
+        console.log('loading', this.fileName);
+    }
+    display() {
+        console.log('display', this.fileName);
     }
 }
-SingleObject.getInstance = (function () {
-    let instance
-    return function () {
-        if (!instance) {
-            instance = new SingleObject()
-        }
-        return instance
+class ProxyImg {
+    constructor(fileName) {
+        this.realImg = new RealImg(fileName)
     }
-})()
-let obj = SingleObject.getInstance()
-obj.login()
+    display() {
+        this.realImg.display()
+    }
+}
+let p = new ProxyImg('1.png')
+p.display()

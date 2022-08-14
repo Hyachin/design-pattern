@@ -9,7 +9,7 @@
 
 ### UML 类图
 
-![factory.png](/public/images/factory.png)
+![factory.png](https://s2.loli.net/2022/08/14/OueWnHifjDap7sm.png)
 
 ### 场景
 
@@ -23,9 +23,24 @@
 
 ### UML 类图
 
-![instance.png](/public/images/instance.png)
+![instance.png](https://s2.loli.net/2022/08/14/SwfdnoAcr9bQe2U.png)
 
 ### 场景
 
 - 登录框、购物车等
 - vuex 和 redux 中的 store
+
+## 代理模式
+
+- 科学上网 访问 github.com
+- 明星经纪人
+
+### UML 类图
+
+![proxy.png](https://s2.loli.net/2022/08/14/UhEryepXG5dnu3N.png)
+
+### 场景
+
+- 网页事件代理
+- jQuery $.proxy
+- ES6 Proxy
